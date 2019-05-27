@@ -36,9 +36,9 @@ public class AnkiTest {
         Deck java = new Deck("java");
         List<Card> cards = new ArrayList<>();
         Card card = new Card("front", "back");
-        Card anotherCard = new Card("shortcut to constructor","command");
+        Card anotherCard = new Card("shortcut to constructor","command + N");
         java.addCard("front","back");
-        java.addCard("shortcut to constructor","command");
+        java.addCard("shortcut to constructor","command + N");
         cards.add(card);
         cards.add(anotherCard);
         assertEquals(cards,java.getCards());
