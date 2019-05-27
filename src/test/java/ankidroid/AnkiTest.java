@@ -27,9 +27,9 @@ public class AnkiTest {
         Deck java = new Deck("java");
         List<Card> cards = new ArrayList<>();
         Card card = new Card("front", "back");
-        java.getCardInDeck("front","back");
+        java.addCard("front","back");
         cards.add(card);
-        assertEquals(cards,java.createCard());
+        assertEquals(cards,java.getCards());
     }
     @Test
     public void itShouldAddMultipleCardsInTheListOfCards() {
@@ -37,11 +37,11 @@ public class AnkiTest {
         List<Card> cards = new ArrayList<>();
         Card card = new Card("front", "back");
         Card anotherCard = new Card("shortcut to constructor","command");
-        java.getCardInDeck("front","back");
-        java.getCardInDeck("shortcut to constructor","command");
+        java.addCard("front","back");
+        java.addCard("shortcut to constructor","command");
         cards.add(card);
         cards.add(anotherCard);
-        assertEquals(cards,java.createCard());
+        assertEquals(cards,java.getCards());
     }
 
 }
